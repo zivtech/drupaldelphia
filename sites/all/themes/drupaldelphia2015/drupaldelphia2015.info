@@ -1,0 +1,52 @@
+screenshot  = screenshot.png
+name        = Drupaldelphia 2015
+description = Read the <a href="http://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Zen.
+
+core        = 7.x
+base theme  = zen
+
+scripts[] = js/js.cookie.js
+scripts[] = js/script.js
+;scripts[] = js/scrollorama.js
+
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = style.css
+stylesheets[all][] = date.css
+stylesheets[all][] = css/style.css
+
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[splash]         = Splash
+regions[content]        = Content
+regions[content_bottom] = Content Bottom
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+settings[zen_breadcrumb]           = yes
+settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_home]      = 1
+settings[zen_breadcrumb_trailing]  = 1
+settings[zen_breadcrumb_title]     = 0
+settings[zen_skip_link_anchor]     = main-menu
+settings[zen_skip_link_text]       = Jump to navigation
+settings[zen_html5_respond_meta][] = respond
+settings[zen_html5_respond_meta][] = html5
+settings[zen_html5_respond_meta][] = meta
+settings[zen_rebuild_registry]     = 1
+settings[zen_wireframes]           = 0
+
+; To add a Panels layout (which can also be used by Display Suite), uncomment
+; the line below and see the documentation at: http://drupal.org/node/495654
+;plugins[panels][layouts] = layouts
