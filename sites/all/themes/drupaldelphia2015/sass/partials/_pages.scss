@@ -540,10 +540,25 @@ tbody {
   border-top: none;
 }
 
+
+//overrides and quick fixes
+//buy tickets
 .page-node-19 {
   .panelizer-view-mode.node.node-full.node-page.node-19 {
     h2 {
       display: none;
     }
+  }
+}
+
+//view-sponsor
+
+.view-sponsor{
+  .views-field.views-field-name{
+    font-size:28px;
+    color: $dark;
+    line-height:32px;
+    margin-top:35px;
+    font-weight:bold;
   }
 }

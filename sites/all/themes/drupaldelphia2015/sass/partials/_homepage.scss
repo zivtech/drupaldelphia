@@ -1,6 +1,9 @@
 // Home page overrides BRING EM IN
 
 .html.front {
+  a{
+    color:$rust;
+  }
 
   .container.content.clearfix, .content{
     padding:0;
@@ -93,7 +96,7 @@
 @mixin content-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 25px 0;
+  padding: 25px;
 }
 
 .pane-entity-field.pane-node-body {
@@ -112,6 +115,7 @@
   //quick facts
   // background: #a2acb3;
   .pane-title{
+    padding-top:20px;
     @include content-container;
   }
   .quick-facts-inner {
@@ -131,10 +135,13 @@
   }
 }
 
-.pane-cod-news-panel-pane-1 {
+.pane-news-content {
   //news
-  background: #a2acb3;
-  .view-cod-news,.pane-title {
+  background: #bdc6cc;
+  .view-news-content,.pane-title {
+    a{
+      color:$rust;
+    }
     @include content-container;
   }
 }
