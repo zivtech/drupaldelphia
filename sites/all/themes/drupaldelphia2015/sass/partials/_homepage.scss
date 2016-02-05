@@ -1,6 +1,9 @@
 // Home page overrides BRING EM IN
 
 .html.front {
+  #header{
+    position:relative;
+  }
   a{
     color:$rust;
   }
