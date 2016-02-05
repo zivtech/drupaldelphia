@@ -1,0 +1,60 @@
+.node-type-ticket-page{
+
+  // clear styling
+  #main{
+    max-width:100%;
+    background: #476377;
+    margin-top: 50px;
+  }
+  #content{
+    @include content-container;
+
+    .note{
+      color:$lightblue;
+    }
+  }
+  .node-6.node header{
+    display:none;
+  }
+
+  .field-type-text-with-summary{
+    padding-top:50px;
+  }
+}
+
+
+
+.pane-node-field-event-tickets{
+  // buy tickets HOMEPAGE
+  background: #476377;
+  color: $lightblue;
+  #ticket-field-formatter-view-form--2 {
+    @include content-container;
+  }
+}
+
+.entity-ticket-type {
+  // ticket
+  .field-name-commerce-price {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 40px;
+    color:$white;
+  }
+  .form-item.form-type-textfield{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .field.field-name-ticket-type-description.field-type-text-long {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+#ticket-field-formatter-view-form, #ticket-field-formatter-view-form--2{
+  #edit-submit, #edit-submit--2{
+    max-width: 98%;
+    width: 98%;
+    margin:0 auto;
+  }
+}

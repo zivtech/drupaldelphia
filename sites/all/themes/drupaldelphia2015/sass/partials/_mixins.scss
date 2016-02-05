@@ -1,0 +1,98 @@
+@mixin bp($point) {
+  @if $point == bp-smallest {
+    @media (min-width: 420px) {
+      @content;
+    }
+  }
+  @if $point == bp-small {
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+  @if $point == bp-medsmall {
+    @media (min-width: 700px) {
+      @content;
+    }
+  }
+  @if $point == bp-medium {
+    @media (min-width: 911px) {
+      @content;
+    }
+  } @else if $point == bp-large {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  } @else if $point == bp-ex-large {
+    @media (min-width: 1500px) {
+      @content;
+    }
+  }
+  @if $point == bp-maxsmall {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if $point == bp-maxmedium {
+    @media all and (max-width: 911px) {
+      @content;
+    }
+  }
+}
+
+.larger-column {
+  @include col(1/1);
+  @include bp(bp-medsmall) {
+    @include col(2/3);
+  }
+}
+
+.smaller-column{
+  @include col(1/1);
+  @include bp(bp-medsmall) {
+    @include col(1/3);
+  }
+}
+
+
+@mixin flexbox-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+@mixin flexbox-order($ordernumber) {
+  order: $ordernumber;
+  -webkit-box-ordinal-group: $ordernumber;
+  -moz-box-ordinal-group: $ordernumber;
+  -webkit-order: $ordernumber;
+  -ms-flex-order: $ordernumber;
+}
+
+@mixin borderbox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin transform {
+  -webkit-transform: value;
+  -moz-transform: value;
+  -ms-transform: value;
+  -o-transform: value;
+  transform: value;
+}
+
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

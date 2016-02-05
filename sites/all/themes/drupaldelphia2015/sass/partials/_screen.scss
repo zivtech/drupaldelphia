@@ -1,0 +1,221 @@
+@import "compass";
+
+
+// Some sizing for map
+#wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media all and (max-width: 480px) {
+
+  .js .mobile-handle {
+    top: 0;
+  }
+  .navbar-vertical header .header-inner {
+    margin-top: 0;
+  }
+}
+
+.drupaldelphia-overlay {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.drupaldelphia-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  height: auto;
+}
+
+#slidedown {
+  // +box-shadow(0 2px 5px rgba(0,0,0,.5))
+  pointer-events: none;
+  position: absolute;
+  height: 65px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+.sidebar {
+  background: $lightblue;
+}
+
+.breadcrumb {
+  li {
+    display: none;
+  }
+  li:last-child {
+    display: inline;
+    a {
+      padding: 0 1em 0 1em;
+    }
+  }
+  display: inline-block;
+  border: 2px solid $white;
+  font-size: 13px;
+  margin: 15px 0 0 15px;
+  @include border-radius(3px);
+  @include box-shadow(0 0px 3px rgba(0, 0, 0, 0.2));
+  @include background($lime-green);
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      list-style: none;
+      float: left;
+      &:first-child {
+        a, span {
+          padding-left: 1em;
+          -webkit-border-top-left-radius: 4px;
+          -moz-border-radius-topleft: 4px;
+          border-top-left-radius: 4px;
+          -webkit-border-bottom-left-radius: 4px;
+          -moz-border-radius-bottomleft: 4px;
+          border-bottom-left-radius: 4px;
+        }
+      }
+    }
+  }
+  a, span {
+    color: #444444;
+    display: block;
+    float: left;
+    font-family: $display-font;
+    font-size: 1.2em;
+    position: relative;
+    line-height: 2em;
+    padding: 0 1.5em 0 1em;
+    text-decoration: none;
+    @include background($lime-green);
+  }
+  a:after, span:after {
+    @include box-shadow(-3px 3px 4px rgba(0, 0, 0, 0.1));
+    content: "";
+    display: block;
+    z-index: 1;
+    height: 2em;
+    width: 2em;
+    border-bottom: 3px solid $white;
+    border-left: 3px solid $white;
+    position: absolute;
+    left: -32px;
+    top: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    @include background($lime-green);
+    @include transform(translateX(1em) rotate(45deg) scale(0.5774) skew(15deg, 15deg));
+  }
+  .current {
+    color: #777777;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-right-radius: 4px;
+    &:after {
+      content: normal;
+    }
+  }
+}
+
+.view-id-sponsors li {
+  text-align: center;
+}
+
+.view-frontpage {
+  .field-body,
+  .field-body p {
+    margin: 0.25em 0 0;
+  }
+  .node-title {
+    margin-top: 0.5em;
+  }
+}
+
+// TABLES SHOULD BE 100%
+table {
+  width: 100%;
+}
+
+.feed-icon {
+  background: url("../images/rss-icon.png");
+  display: block;
+  width: 40px;
+  height: 40px;
+  img {
+    display: none;
+  }
+}
+
+// Date inputs float.
+.container-inline-date .form-item .form-item {
+  float: left;
+}
+
+// Captcha fix
+input#recaptcha_response_field {
+  height: auto;
+}
+
+.view-cod-session-schedule {
+  padding: 20px 0 0;
+  .views-row {
+    padding: 10px 10px 10px 0;
+  }
+  .views-field-title {
+    color: #888888;
+    font-family: "Rokkitt", serif;
+    text-transform: uppercase;
+    font-size: 1.6em;
+  }
+  .view-sessions {
+    .views-field-title {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.2em;
+      text-transform: none;
+    }
+  }
+  .views-field-view {
+    padding: 0 0 0 10px;
+    .field-speakers, .field-experience, .field-track {
+      display: inline;
+    }
+  }
+}
+
+// Mkae sessions display on mobile.
+@media all and (max-width: 911px) {
+  .view-cod-session-schedule-entity {
+    td {
+      clear: both;
+      display: block;
+    }
+  }
+}
+

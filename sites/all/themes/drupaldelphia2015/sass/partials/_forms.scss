@@ -1,0 +1,318 @@
+
+form {
+  margin: 40px auto;
+}
+
+fieldset {
+  margin: auto;
+  height: auto;
+  border: 1px solid #e5e5e5;
+  border-top: 0px solid #e5e5e5;
+  background: #eeeeee;
+  padding: 0 20px;
+}
+
+form {
+  label {
+    font-size: 1em;
+    color: #111111;
+    &.mid {
+      line-height: 40px;
+    }
+  }
+}
+
+input, select, .btn {
+  @include border-radius(3px);
+}
+
+input[type="text"], input[type="password"] select, textarea, .btn {
+  //+transition(.4s ease-out all)
+  @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.4) inset, 0 1px white);
+  background: white;
+  border: 0;
+  font-size: 1em;
+  font-weight: 300;
+  min-height: 40px;
+  margin: 0;
+  max-width: 95%;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+input:hover, textarea:hover {
+  //
+}
+
+input:focus, textarea:focus {
+  //
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+select {
+  margin-bottom: 40px;
+  @include appearance(none);
+  width: 260px;
+}
+
+input {
+  &.checkbox, &.radio {
+    margin: 0;
+    padding: 2px 0;
+    width: auto;
+    height: auto;
+    background: white;
+    border: 3px solid #999999;
+    height: 16px;
+    cursor: pointer;
+    width: 16px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    //+box-shadow(0 1px 2px rgba(0, 0, 0, 0.44) inset, 0 1px 0 rgba(255, 255, 255, 0.54))
+ 
+  }
+  &[type="checkbox"]:hover {
+    background-color: rgba(191, 185, 169, 0.4);
+  }
+  &[type="radio"] {
+    &:hover {
+      background-color: rgba(191, 185, 169, 0.4);
+    }
+    @include border-radius(25px);
+  }
+  &[type="checkbox"]:checked {
+    background: $lime-green;
+    border: 3px solid $lime-green;
+  }
+  &[type="radio"]:checked {
+    background: $lime-green;
+    @include box-shadow(0 0 1px 2px white inset);
+    border: 3px solid $lime-green;
+  }
+  &.button {
+    width: 270px;
+    height: 40px;
+    border: 0px solid white;
+  }
+}
+
+textarea {
+  @include border-radius(6px);
+  padding: 10px;
+}
+
+.btn,
+input[type="submit"], .form-submit, .checkout-buttons .checkout-back {
+  background: $rust;
+  @include border-radius(3px);
+  border:none;
+  padding:0 20px;
+  color: $lightblue;
+  text-shadow: 1px 2px 2px $darkrust;
+  cursor: pointer;
+  font-family: Rokkitt;
+  font-size: 30px;
+  height: 55px;
+  margin: 10px;
+  margin-left:0;
+  box-shadow:3px 4px 0px $darkrust;
+  &:hover {
+    background: darken($rust, 10%);
+    color:$lightblue;
+    text-decoration:none;
+
+  }
+  &:active {
+    background: darken($rust, 10%);
+    color:$lightblue;
+    text-decoration:none;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.btn {
+  padding: 0.35em 0.5em;
+}
+
+#edit-cancel, .checkout-back{
+  background:$rust;
+  color: $white;
+  padding: 0 15px;
+  margin-left:5px;
+}
+
+.select {
+  //border-top: 1px solid $passive-text;
+  padding: 0 7px;
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  margin-top: -2px;
+  &:after {
+    content: "‹";
+    color: $passive-text;
+    font-size: 30px;
+  }
+}
+
+.input-wrap {
+  display: inline;
+  position: relative;
+}
+
+.form-item {
+  // Wrapper for a form element (or group of form elements) and its label
+  margin: 1.5em 0;
+  input.error,
+  textarea.error,
+  select.error {
+    // Highlight the form elements that caused a form submission error
+    border: 1px solid #cc0000;
+  }
+  label {
+    // The label for a form element
+    margin-right: 20px;
+    font-family: $display-font;
+    font-weight: bold;
+  }
+  label.option {
+    // The label for a radio button or checkbox
+    display: inline;
+  }
+  .form-required {
+    // The part of the label that indicates a required field
+    color: transparent;
+    &:after {
+      color: rgba(204, 0, 0, 0.5);
+      font-weight: 300;
+      content: "←required";
+    }
+  }
+  .description {
+    // The descriptive help text (separate from the label)
+    font-size: 0.85em;
+    font-weight: 300;
+  }
+  .form-checkboxes &,
+  .form-radios & {
+    // Pack groups of checkboxes and radio buttons closer together
+    margin: 0;
+    // Drupal core uses "0.4em 0"
+ 
+  }
+}
+
+.form-submit {
+  // The submit button
+}
+
+.container-inline {
+  div,
+  label {
+    // Inline labels and form divs
+    display: inline;
+  }
+}
+
+.tips {
+  // Tips for Drupal's input formats
+}
+
+a.button {
+  // Buttons used by contrib modules like Media
+  @include appearance(button);
+}
+
+// Password confirmation
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+// Search (search-block-form.tpl.php)
+#block-search-form {
+  // Wrapper for the search form
+}
+
+// Drupal's default login form block
+#user-login-form {
+  text-align: left;
+  // LTR
+  //
+  // OpenID
+  //
+  // The default styling for the OpenID login link seems to assume Garland's
+  // styling of list items.
+  ul {
+    // OpenID creates a new ul above the login form's links.
+    margin-bottom: 0;
+    // Position OpenID's ul next to the rest of the links.
+ 
+  }
+  html.js & li.openid-link,
+  li.openid-link {
+    // The "Log in using OpenID" link.
+    margin-top: 1.5em;
+    margin-left: -20px;
+    // LTR
+    // Un-do some of the padding on the ul list.
+ 
+  }
+  li.user-link {
+    // The "Cancel OpenID login" link.
+    margin-top: 1.5em;
+  }
+}
+
+#user-login ul {
+  margin: 1.5em 0;
+}
+
+// Drupal admin tables
+//
+// We overrode these styles in normalize.css, but restore them for the admin
+// section of the site.
+form {
+  th {
+    text-align: left;
+    // LTR
+    padding-right: 1em;
+    // LTR
+    border-bottom: 3px solid #cccccc;
+  }
+  tbody {
+    border-top: 1px solid #cccccc;
+  }
+  tr.even {
+    background-color: white;
+  }
+  table .item-list ul {
+    margin: 0;
+  }
+}
+
+// Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+td.menu-disabled {
+  background: #cccccc;
+}
+
+.tabs-primary__tab-link.is-active.active {
+  display: block;
+  top: -3px;
+  position: relative;
+}
+
+
+.page-user-register #user-register-form {
+  .field-name-field-account-type .form-item.form-item-field-account-type-und-SpamBot {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
