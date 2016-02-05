@@ -105,11 +105,11 @@ textarea {
 }
 
 .btn,
-input[type="submit"] {
+input[type="submit"], .form-submit, .checkout-buttons .checkout-back {
   background: $rust;
   @include border-radius(3px);
   border:none;
-  padding:0 108px;
+  padding:0 20px;
   color: $lightblue;
   text-shadow: 1px 2px 2px $darkrust;
   cursor: pointer;
@@ -121,10 +121,14 @@ input[type="submit"] {
   box-shadow:3px 4px 0px $darkrust;
   &:hover {
     background: darken($rust, 10%);
+    color:$lightblue;
+    text-decoration:none;
 
   }
   &:active {
     background: darken($rust, 10%);
+    color:$lightblue;
+    text-decoration:none;
   }
   &:first-child {
     margin-left: 0;
@@ -133,6 +137,13 @@ input[type="submit"] {
 
 .btn {
   padding: 0.35em 0.5em;
+}
+
+#edit-cancel, .checkout-back{
+  background:$rust;
+  color: $white;
+  padding: 0 15px;
+  margin-left:5px;
 }
 
 .select {

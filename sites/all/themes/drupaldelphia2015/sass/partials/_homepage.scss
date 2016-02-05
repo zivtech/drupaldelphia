@@ -1,6 +1,10 @@
 // Home page overrides BRING EM IN
 
 .html.front {
+
+  .container.content.clearfix, .content{
+    padding:0;
+  }
   #main {
     max-width: 100%;
 
@@ -13,6 +17,11 @@
     }
   }
 }
+
+
+
+
+
 
 #splash-inner {
   background: url(../images/bg1.jpg) no-repeat center 0;
