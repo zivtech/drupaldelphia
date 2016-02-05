@@ -106,25 +106,25 @@ textarea {
 
 .btn,
 input[type="submit"] {
-  background: $lime-green;
-  @include background-image(linear-gradient($lime-green, $lime-dark));
+  background: $rust;
   @include border-radius(3px);
-  border: 2px solid white;
-  @include box-shadow(0 0 5px #999999);
-  color: $dark-gray;
+  border:none;
+  padding:0 108px;
+  color: $lightblue;
+  text-shadow: 1px 2px 2px $darkrust;
   cursor: pointer;
   font-family: Rokkitt;
-  font-size: 20px;
-  height: 40px;
+  font-size: 30px;
+  height: 55px;
   margin: 10px;
+  margin-left:0;
+  box-shadow:3px 4px 0px $darkrust;
   &:hover {
-    background: darken($lime-green, 10%);
-    @include background-image(linear-gradient(darken($lime-green, 10%), darken($lime-dark, 10%)));
-    color: $dark-gray;
+    background: darken($rust, 10%);
+
   }
   &:active {
-    @include background-image(linear-gradient($lime-dark, $lime-green));
-    @include box-shadow(0 0 5px $subtle);
+    background: darken($rust, 10%);
   }
   &:first-child {
     margin-left: 0;
@@ -136,11 +136,12 @@ input[type="submit"] {
 }
 
 .select {
-  border-top: 1px solid $passive-text;
-  padding: 5px 7px;
+  //border-top: 1px solid $passive-text;
+  padding: 0 7px;
   pointer-events: none;
   position: absolute;
   right: 10px;
+  margin-top: -2px;
   &:after {
     content: "‹";
     color: $passive-text;
@@ -302,3 +303,5 @@ td.menu-disabled {
     visibility: hidden;
   }
 }
+
+
